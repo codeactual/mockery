@@ -13,6 +13,7 @@ before_script:
   - go install -v ./cmd/...
 
 script:
-  - go generate github.com/vektra/mockery/165
-  - ls -la $GOPATH/src/github.com/vektra/mockery/165/mock_interface_test.go
-  - cat $GOPATH/src/github.com/vektra/mockery/165/mock_interface_test.go
+  - go generate github.com/vektra/mockery/165_case_0/test
+  - ls -la ./165_case_0/test
+  - cat ./165_case_0/mock_interface_test.go
+  - mockery -name Iface -dir ./165_case_1/versioned -print
