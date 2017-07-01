@@ -15,5 +15,5 @@ before_script:
 script:
   - go generate github.com/vektra/mockery/165_case_0/test
   - ls -la ./165_case_0/test
-  - cat ./165_case_0/mock_interface_test.go
+  - cat ./165_case_0/test/mock_interface_test.go
   - mockery -name Iface -dir ./165_case_1/versioned -print
