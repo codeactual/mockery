@@ -9,6 +9,7 @@ go:
   - tip
 
 before_script:
+  - go get ./...
   - go install -v ./cmd/...
 
 script: go generate $GOPATH/src/github.com/vektra/mockery/165
