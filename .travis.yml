@@ -4,13 +4,11 @@ language: go
 go_import_path: github.com/vektra/mockery
 
 go:
-  - 1.5.x
-  - 1.6.x
   - 1.7.x
   - 1.8.x
   - tip
 
 before_script:
-  - go get ./...
-  # This package is used in tests only, so "go get" misses it
-  - go get github.com/stretchr/testify/assert
+  - go install -v ./cmd/...
+
+script: go generate $GOPATH/src/github.com/vektra/mockery/165
